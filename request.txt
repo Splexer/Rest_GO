@@ -36,3 +36,17 @@ Delete продукт
         .then(response => response.json())
         .then(data => console.log(data))
         .catch((error) => console.error('Error:', error));
+
+PUT продукт
+        fetch('http://localhost:3000/products/10', {
+            method: 'PUT',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+             body: JSON.stringify({
+            ID: "10", Name: "Changed product", Quantity: 199, Unit_coast: 99.9, Measure: "5"
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch((error) => console.error('Error:', error));
