@@ -1,0 +1,38 @@
+fetch('http://localhost:3000/endpoint', {
+	method: 'POST',
+	headers: {
+	  'Content-Type': 'application/json',
+	},
+	body: JSON.stringify({
+	  key: 'value' // Здесь данные для отправки
+	})
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch((error) => console.error('Error:', error));
+
+
+  POST продукт: 
+        fetch('http://localhost:3000/products', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+            ID: "10", Name: "PostProd", Quantity: 150, Unit_coast: 2, Measure: "10"
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch((error) => console.error('Error:', error));
+
+Delete продукт
+        fetch('http://localhost:3000/products/ВПИСАТЬ СЮДА ID', {
+            method: 'DELETE',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch((error) => console.error('Error:', error));
